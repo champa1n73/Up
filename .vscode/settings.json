@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "UpTemplate.sln"
+    "dotnet.defaultSolution": "Up.sln"
 }
