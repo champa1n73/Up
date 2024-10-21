@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     [Header("Flags")]
     bool isGameOver;
 
+    [Header("Counters")]
+    static int dieCount = 0;
+
     public int GetMinSpeed()
     {
         return minSpeed;
@@ -44,9 +47,16 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        dieCount++;
         isGameOver = true;
         scoreManager.SaveHighestScore();
         UIControl.GetGameOverPanel().SetActive(true);
+        Debug.Log(dieCount);
+        if(dieCount % 2 == 0)
+        {
+            AdsManager.instance.GetRewardedAdObject().LoadRewardedAd();
+            AdsManager.instance.GetRewardedAdObject().ShowRewardedAd();
+        }
     }
 
     public void IncreaseSpeedRange()

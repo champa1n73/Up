@@ -3938,6 +3938,52 @@ MonoBehaviour:
   shakeDuration: 0.1
   shakeMagnitude: 0.15
   followCamera: {fileID: 519420035}
+--- !u!1 &536652258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536652260}
+  - component: {fileID: 536652259}
+  m_Layer: 0
+  m_Name: Ads Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &536652259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536652258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c439a7cfd616f4f93524e91320bb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bannerAd: {fileID: 8648282843179962510, guid: 078ac70ff16c5b54593f5538b4c0df79, type: 3}
+  rewardedAdObject: {fileID: 7996471194023180164, guid: 61ff54e3aa364e64ebf80ccbfa0252ef, type: 3}
+--- !u!4 &536652260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536652258}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &616061676
 GameObject:
   m_ObjectHideFlags: 0
@@ -7893,10 +7939,10 @@ RectTransform:
   - {fileID: 332938937}
   m_Father: {fileID: 1383750125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.42, y: 0.93}
-  m_AnchorMax: {x: 0.58, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 86, y: -67}
+  m_SizeDelta: {x: 172, y: 134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1507489652
 MonoBehaviour:
@@ -14583,3 +14629,4 @@ SceneRoots:
   - {fileID: 1263889237}
   - {fileID: 889677579}
   - {fileID: 1977918055}
+  - {fileID: 536652260}

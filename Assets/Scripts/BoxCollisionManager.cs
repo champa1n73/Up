@@ -65,18 +65,18 @@ public class BoxCollisionManager : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D other) 
     {
-        if(collisionDetected || !ContactFromBelow(other))
+        if( gameManager.GetIsGameOver() || collisionDetected || !ContactFromBelow(other))
         {
             return;
         }
-
+        collisionDetected = true;
         TouchingPlatform(other);
         
         if(!other.gameObject.tag.Equals("Box"))
         {
             return;
         }
-        collisionDetected = true;
+        
 
         cameraShake.Play();
 
@@ -109,14 +109,12 @@ public class BoxCollisionManager : MonoBehaviour
 
     void LowerThanTower()
     {
-        if(heightChecked)
+        if (gameManager.GetIsGameOver()) { return; }
+        if(heightChecked || Mathf.Abs(transform.position.y) > towerHeight)
         {
             return;
         }
-        if(Mathf.Abs(transform.position.y) > towerHeight)
-        {
-            return;
-        }
+
         gameManager.GameOver();
     }
 

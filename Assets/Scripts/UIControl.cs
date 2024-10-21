@@ -29,7 +29,12 @@ public class UIControl : MonoBehaviour
 
     void Start()
     {
-        BoxControl.instance.SetSoundSettingPanel(soundSettingPanel);
+        if(BoxControl.instance != null)
+        {
+            BoxControl.instance.SetSoundSettingPanel(soundSettingPanel);
+        }  
+
+        AdsManager.instance.GetBannerAd().LoadAd();
         musicSlider.value = AudioManager.instance.GetMusicVolume();
         sfxSlider.value = AudioManager.instance.GetSFXVolume();
     }
